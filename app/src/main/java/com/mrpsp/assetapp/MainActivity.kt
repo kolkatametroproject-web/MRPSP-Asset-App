@@ -18,7 +18,7 @@ import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
-
+import android.webkit.CookieManager
 /**
  * MRPSP Asset App.
  * Uses the hosted website for authentication, inventory, face verification,
@@ -78,7 +78,8 @@ class MainActivity : ComponentActivity() {
             settings.mediaPlaybackRequiresUserGesture = false
             settings.allowFileAccess = false
             settings.allowContentAccess = true
-
+            CookieManager.getInstance().setAcceptCookie(true)
+CookieManager.getInstance().setAcceptThirdPartyCookies(this, true)
             webViewClient = object : WebViewClient() {
                 override fun shouldOverrideUrlLoading(
                     view: WebView?,
