@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
 
     private lateinit var web: WebView
 
-    private val hostingUrl = "https://firebase-excel.web.app/"
+    private val hostingUrl = "https://kolkatametroproject-web.github.io/firebase-excel/"
 
     private val cameraPermission =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
